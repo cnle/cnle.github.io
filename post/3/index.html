@@ -4,17 +4,13 @@
 <head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-<meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
-
-🏠 关于本站
-👨‍💻 博主是谁
-⛹ 兴趣爱好
-📬 联系我呀
-..." />
+<meta name="description" content="笨牛网
+1，添加came/ip接入，解析记录到自己服务器的真实ip
+2，去域名所在服务商解析came到（你的域名.cdn.cloudflare.net）选境外。
+继续在服务商解析，然后挑一个cf的ip段，添加A记录解析到国内或电信移动联通，..." />
 <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
 <script async src="https://cdn.ampproject.org/v0.js"></script>
-<title>关于 | Live every day happily </title>
+<title>关于linux一些命令 | Live every day happily </title>
 <style amp-custom>
 body {
     width: 100vw;
@@ -2503,7 +2499,7 @@ footer {
 </style>
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-<link rel="canonical" href="https://yoowo.github.io/a/post/about/" />
+<link rel="canonical" href="https://yoowo.github.io/a/post/3/" />
 <link rel="shortcut icon" href="https://yoowo.github.io/a/favicon.ico?v=1625822669276">
 <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
@@ -2516,7 +2512,7 @@ footer {
 
 <script async custom-element="amp-gist" src="https://cdn.ampproject.org/v0/amp-gist-0.1.js"></script>
 
-<link rel="alternate" type="application/atom+xml" title="关于 | Live every day happily  - Atom Feed" href="https://yoowo.github.io/a/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="关于linux一些命令 | Live every day happily  - Atom Feed" href="https://yoowo.github.io/a/atom.xml">
 
 
 
@@ -2576,14 +2572,17 @@ footer {
 
       <div class="article-info">
         
+          <div class="flex-box meta-category">
+            <a class="post-cate" href="https://yoowo.github.io/a/tag/vNTnKns2h/">linux</a></div>
+          
         <h2 class="article-title">
-          <a href="https://yoowo.github.io/a/post/about/">关于</a>
+          <a href="https://yoowo.github.io/a/post/3/">关于linux一些命令</a>
         </h2>
         <div class="flex-box">
           <div class="flex-box post-meta-box">
             <a class="post-meta" href="https://yoowo.github.io/a"><span
                 class="iconfont icon-mr-postmeta"></span>chaven</a>
-            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>2019 年 01	月 25日</span>
+            <span class="post-meta"><span class="iconfont icon-mr-postmeta"></span>2021 年 07	月 9日</span>
             
 
 
@@ -2591,16 +2590,82 @@ footer {
         </div>
       </div>
       <div class="content">
-        <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+        <p>笨牛网</p>
+<p>1，添加came/ip接入，解析记录到自己服务器的真实ip<br>
+2，去域名所在服务商解析came到（你的域名.cdn.cloudflare.net）选境外。<br>
+继续在服务商解析，然后挑一个cf的ip段，添加A记录解析到国内或电信移动联通，推荐解析商 dnspod（华为，阿里）~</p>
+<p>apt install socat</p>
+<p>screen -S rr</p>
+<p>socat  -d -d -lf /var/log/socat.log TCP6-LISTEN:2052,bind=[2607:fcd0:fa80:2a1a:dfca:5c2f:480f:970v],reuseaddr,fork TCP4:127.0.0.1:2052</p>
+<p>查看当前vps虚拟架构<br>
+virt-whtat</p>
+<p>绑定域名<br>
+安装Apache2<br>
+sudo apt-get install apache2</p>
+<h1 id="启动apache2服务">启动apache2服务</h1>
+<p>/etc/init.d/apache2 start<br>
+编辑apache2配置文件：<br>
+vi /etc/apache2/sites-enabled/000-default.conf<br>
+Documentroot下面一行添加<br>
+Servername baidu.com<br>
+重启apache2：/etc/init.d/apache2 restart</p>
+<p>pscp使用命令<br>
+pscp -P 22 D:\1\1.zip root@173.82.57.888:/etc/123</p>
+<p>ipv4端口转发<br>
+apt-get install rinetd<br>
+vi /etc/rinetd.conf<br>
+0.0.0.0 9999 127.0.0.1 9009<br>
+/usr/sbin/rinetd             ##启动转发<br>
+rinetd                            ##启动程序：<br>
+/etc/init.d/rinetd restart ##重启软件<br>
+pkill rinetd                     ##关闭进程</p>
+<p>putty隧道<br>
+本地与服务器ipv4映射<br>
+1.找到SSH--Tunnels--sourceport 设置 9999 ---Destination设置 localhost:9009 点击add</p>
+<p>ubuntu增加swap，临时增加虚拟内存<br>
+free -h<br>
+sudo dd if=/dev/zero of=/var/swap bs=1024 count=2048000<br>
+sudo mkswap /var/swap<br>
+sudo mkswap -f /var/swap<br>
+sudo swapon /var/swap<br>
+free -h<br>
+永久性：sudo vi /etc/fstab<br>
+/swap/swapfile swap swap defaults 0 0</p>
+<p>取消swap<br>
+sudo swapoff /var/swap<br>
+free -h</p>
+<p>windows节点转发<br>
+1.portTunnels.exe<br>
+2.netsh<br>
+查看状态：netsh interface portproxy show v4tov4<br>
+创建转发：netsh interface portproxy add v4tov4 listenaddress=[外网IP] listenport=[外网端口] connectaddress=[内网IP] connectport=[内网端口]<br>
+删除netsh interface portproxy delete v4tov4 listenaddress=[外网IP] listenport=[外网端口]</p>
+<p>rein<br>
+跨平台通用-支持mac，32.64位win.linux，arm32.64位liunx<br>
+https://github.com/firstboot/rein/releases/tag/v1.0.6-bin<br>
+生成默认配置：<br>
+./rein-e-detail-upstream （端口转发）<br>
+-e-detail-inps （内网穿透服务器）<br>
+-e-detail-inpc （内网穿透客户端）<br>
+-e-detail-fileshare （FTP文件服务）<br>
+运行./rein -c rein.json</p>
 
       </div>
 
+      
+      <nav class="post-nav">
+        
+        <div class="nav-previous">
+          <a class="post-nav-link-active" title="Linux安装轻量图形桌面环境" href="https://yoowo.github.io/a/post/4/">上一篇文章</a>
+        </div>
+        
+        
+        <div class="nav-next">
+          <a class="post-nav-link-active" title="欢迎访问我的第一个博客" href="https://yoowo.github.io/a/post/1/">下一篇文章</a>
+          
+
+        </div>
+      </nav>
       
 
       
@@ -2635,6 +2700,8 @@ footer {
       
 
       <div class="post-tags">
+        
+        <a href="https://yoowo.github.io/a/tag/vNTnKns2h/" rel="tag">linux</a>        
                
       </div>
 

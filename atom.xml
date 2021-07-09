@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yoowo.github.io/a</id>
     <title>Live every day happily </title>
-    <updated>2021-07-09T09:06:13.031Z</updated>
+    <updated>2021-07-09T09:25:46.784Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yoowo.github.io/a"/>
     <link rel="self" href="https://yoowo.github.io/a/atom.xml"/>
@@ -11,9 +11,47 @@
     <icon>https://yoowo.github.io/a/favicon.ico</icon>
     <rights>All rights reserved 2021, Live every day happily </rights>
     <entry>
+        <title type="html"><![CDATA[Linux安装轻量图形桌面环境]]></title>
+        <id>https://yoowo.github.io/a/post/4/</id>
+        <link href="https://yoowo.github.io/a/post/4/">
+        </link>
+        <updated>2021-07-09T09:11:18.000Z</updated>
+        <content type="html"><![CDATA[<p>搭建测试环境为滴滴云的ubuntu 18.04</p>
+<p>首先，root账户默认登录不上图形界面<br>
+so，在这之前 必须新建一个有权限的普通账户！</p>
+<p>adduser+用户名 //自定义名字<br>
+输入visudo命令<br>
+该命令实际上打开的是/etc/sudoers文件，在“root ALL=(ALL:ALL) ALL”加入以下一行：<br>
+lin ALL=(ALL:ALL) ALL 然后 ctrl + x 退出，是否保存选择yes，再按Enter键退出</p>
+<p>添加用户到超级组，例如添加 lin 到 sudo 组<br>
+sudo usermod -aG sudo lin 或者，使用这个也能成功 sudo adduser lin sudo</p>
+<p>查看用户所在组<br>
+id 用户名</p>
+<p>安装界面：<br>
+更换阿里源<br>
+vi /etc/apt/sources.list<br>
+百度搜索18.04阿里源替换进去！<br>
+sudo apt update</p>
+<p>安装i3wm<br>
+xfce4 只安装了其核心，提供一些X11基本功能<br>
+sudo apt-get install xfce4<br>
+sudo apt-get install i3<br>
+安装登陆界面管理器：<br>
+sudo apt-get install lightdm<br>
+完成输入reboot重启</p>
+<p>控制面板的vnc进去就是图形界面！</p>
+<p>安装gdebi：<br>
+sudo apt-get install gdebi</p>
+<p>就可以使用gdebi安装xx.deb等自己下载的文件了！<br>
+cd 安装包的目录<br>
+sudo gdebi sougou.deb</p>
+<p>提示：如果安装不了idena.deb请试试安装最新的nodejs 和 npm！</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[关于linux一些命令]]></title>
-        <id>https://yoowo.github.io/a/post/guan-yu-linux-yi-xie-ming-ling/</id>
-        <link href="https://yoowo.github.io/a/post/guan-yu-linux-yi-xie-ming-ling/">
+        <id>https://yoowo.github.io/a/post/3/</id>
+        <link href="https://yoowo.github.io/a/post/3/">
         </link>
         <updated>2021-07-09T07:23:44.000Z</updated>
         <content type="html"><![CDATA[<p>笨牛网</p>

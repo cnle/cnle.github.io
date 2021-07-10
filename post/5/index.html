@@ -2509,7 +2509,7 @@ footer {
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
 <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 <link rel="canonical" href="https://yoowo.github.io/a/post/5/" />
-<link rel="shortcut icon" href="https://yoowo.github.io/a/favicon.ico?v=1625885387478">
+<link rel="shortcut icon" href="https://yoowo.github.io/a/favicon.ico?v=1625889925377">
 <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
 <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
@@ -2552,11 +2552,6 @@ footer {
             
             <li>
               <a href="/a/archives" aria-current="page">归档</a></li>
-            
-            
-            
-            <li>
-              <a href="/a/tags" aria-current="page">标签</a></li>
             
             
             
@@ -2616,8 +2611,9 @@ WindowsPhone=&gt;ikev2<br>
 </blockquote>
 </blockquote>
 <h2 id="1输入ifconfig查看公网接口名称稍后用到然后下载脚本">1.输入ifconfig查看公网接口名称稍后用到，然后下载脚本:</h2>
-<pre><code>wget https://raw.githubusercontent.com/yoowo/a/main/one-key-ikev2.sh
-</code></pre>
+<blockquote>
+<p>wget https://raw.githubusercontent.com/yoowo/a/main/one-key-ikev2.sh</p>
+</blockquote>
 <h2 id="2若需受信任证书请提前把证书放在脚本目录给权限并运行">2.若需受信任证书，请提前把证书放在脚本目录，给权限并运行</h2>
 <pre><code>chmod +x one-key-ikev2.sh
 bash one-key-ikev2.sh
@@ -2634,9 +2630,9 @@ c.server.pem 签发域名证书时用的私钥；
 <li>选择no，使用自签名证书（需要填写自签名的证书的相关信息(C,O,CN)，为空将使用默认值）</li>
 <li>安装过程中会出现输入两次pkcs12证书的密码的提示，可以设置为空。选择yes，使用受信任证书。</li>
 </ul>
-<h4 id="6提示是否使用snat规则可选默认为不使用-使用前请确保服务器具有不变的静态公网ip可提升防火墙对数据包的处理速度如果服务器网络设置了nat如aws的弹性ip机制则填写网卡连接接口的ip地址">6.提示是否使用SNAT规则(可选).默认为不使用。使用前请确保服务器具有不变的静态公网ip,可提升防火墙对数据包的处理速度.如果服务器网络设置了NAT(如AWS的弹性ip机制),则填写网卡连接接口的ip地址。</h4>
-<h4 id="7防火墙的配置默认配置是iptables-如果使用的是firewall如centos7请选择yes会自动配置firewall将无视snat并跳过后续的补充网卡接口步骤-补充网卡接口信息为空则使用默认值xen-kvm默认使用eth0openvz默认使用venet0如果使用其他公网接口需要在此指定接口名称填写错误vpn连接后将无法访问外网">7.防火墙的配置.默认配置是iptables。如果使用的是firewall(如CentOS7，请选择yes，会自动配置firewall,将无视SNAT并跳过后续的补充网卡接口步骤)。补充网卡接口信息,为空则使用默认值(Xen、KVM默认使用eth0,OpenVZ默认使用venet0).如果使用其他公网接口需要在此指定接口名称,填写错误VPN连接后将无法访问外网)</h4>
-<h4 id="8等待安装完成会出现默认用户名和配置文件地址-提示修改配置时多用户时用户名不能使用any自签名证书请将提示信息中的证书文件cacertpem拷贝到客户端修改后缀名为cer后导入-ios设备使用ikev1无需导入证书而是需要在连接时输入共享密钥共享密钥即是提示信息中的黄字psk">8.等待安装完成，会出现默认用户名和配置文件地址。（提示：修改配置时，多用户时用户名不能使用%any），自签名证书请将提示信息中的证书文件ca.cert.pem拷贝到客户端，修改后缀名为.cer后导入。ios设备使用Ikev1无需导入证书，而是需要在连接时输入共享密钥，共享密钥即是提示信息中的黄字PSK.</h4>
+<p>6.提示是否使用SNAT规则(可选).默认为不使用。使用前请确保服务器具有不变的静态公网ip,可提升防火墙对数据包的处理速度.如果服务器网络设置了NAT(如AWS的弹性ip机制),则填写网卡连接接口的ip地址。</p>
+<p>7.防火墙的配置.默认配置是iptables。如果使用的是firewall(如CentOS7，请选择yes，会自动配置firewall,将无视SNAT并跳过后续的补充网卡接口步骤)。补充网卡接口信息,为空则使用默认值(Xen、KVM默认使用eth0,OpenVZ默认使用venet0).如果使用其他公网接口需要在此指定接口名称,填写错误VPN连接后将无法访问外网)</p>
+<p>8.等待安装完成，会出现默认用户名和配置文件地址。（提示：修改配置时，多用户时用户名不能使用%any），自签名证书请将提示信息中的证书文件ca.cert.pem拷贝到客户端，修改后缀名为.cer后导入。ios设备使用Ikev1无需导入证书，而是需要在连接时输入共享密钥，共享密钥即是提示信息中的黄字PSK.</p>
 <h2 id="可连接但是无法访问网络">可连接但是无法访问网络：</h2>
 <blockquote>
 <p>检查iptables是否正常启用,检查iptables规则是否与其他地方冲突,或根据服务器防火墙的实际情况手动修改配置。<br>
@@ -2740,7 +2736,7 @@ head.appendChild(script);
   <aside id="profile-2" class="widget widget_profile">
     <div class="profile-box">
       <div class="profile-avatar">
-        <amp-img src="https://yoowo.github.io/a/images/avatar.png?v=1625885387478" alt="avatar"
+        <amp-img src="https://yoowo.github.io/a/images/avatar.png?v=1625889925377" alt="avatar"
           layout="fill"></amp-img>
       </div>
       <div class="profile-content">

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yoowo.github.io/a</id>
     <title>Live every day happily </title>
-    <updated>2021-07-09T13:20:20.456Z</updated>
+    <updated>2021-07-10T02:44:22.131Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yoowo.github.io/a"/>
     <link rel="self" href="https://yoowo.github.io/a/atom.xml"/>
@@ -10,6 +10,77 @@
     <logo>https://yoowo.github.io/a/images/avatar.png</logo>
     <icon>https://yoowo.github.io/a/favicon.ico</icon>
     <rights>All rights reserved 2021, Live every day happily </rights>
+    <entry>
+        <title type="html"><![CDATA[linux搭建ikev2协议的Vpn]]></title>
+        <id>https://yoowo.github.io/a/post/5/</id>
+        <link href="https://yoowo.github.io/a/post/5/">
+        </link>
+        <updated>2021-07-10T01:43:41.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="输入virt-what可以看到vps的虚拟架构~">输入virt-what，可以看到vps的虚拟架构~</h2>
+<h2 id="服务端要求">服务端要求：</h2>
+<blockquote>
+<blockquote>
+<p>Ubuntu或者CentOS-6/7或者Debian</p>
+</blockquote>
+</blockquote>
+<h2 id="客户端">客户端：</h2>
+<blockquote>
+<blockquote>
+<p>iOS/OSX=&gt;ikev1,ikev2<br>
+Andriod=&gt;ikev1<br>
+WindowsPhone=&gt;ikev2<br>
+其 他Windows平台=&gt;ikev2</p>
+</blockquote>
+</blockquote>
+<h2 id="1输入ifconfig查看公网接口名称稍后用到然后下载脚本">1.输入ifconfig查看公网接口名称稍后用到，然后下载脚本:</h2>
+<pre><code>wget https://raw.githubusercontent.com/yoowo/a/main/one-key-ikev2.sh
+</code></pre>
+<h2 id="2若需受信任证书请提前把证书放在脚本目录给权限并运行">2.若需受信任证书，请提前把证书放在脚本目录，给权限并运行</h2>
+<pre><code>chmod +x one-key-ikev2.sh
+bash one-key-ikev2.sh
+</code></pre>
+<h2 id="证书格式">证书格式</h2>
+<pre><code>a.ca.cert.pem 证书颁发机构的CA，比如Let‘s Encrypt的证书,或者其他链证书；
+b.server.cert.pem 签发的域名证书；
+c.server.pem 签发域名证书时用的私钥；
+</code></pre>
+<h2 id="3选择vps类型openvz还是xen-kvm选错将安装出错">3.选择vps类型（OpenVZ还是Xen、KVM），选错将安装出错。</h2>
+<h2 id="4输入服务器ip或者绑定的域名连接vpn时服务器地址将需要与此保持一致如果是导入泛域名证书这里需要写-域名com的形式">4.输入服务器ip或者绑定的域名(连接vpn时服务器地址将需要与此保持一致,如果是导入泛域名证书这里需要写**. 域名.com的形式。</h2>
+<h2 id="5选择证书类型">5.选择证书类型</h2>
+<ul>
+<li>选择no，使用自签名证书（需要填写自签名的证书的相关信息(C,O,CN)，为空将使用默认值）</li>
+<li>安装过程中会出现输入两次pkcs12证书的密码的提示，可以设置为空。选择yes，使用受信任证书。</li>
+</ul>
+<h4 id="6提示是否使用snat规则可选默认为不使用-使用前请确保服务器具有不变的静态公网ip可提升防火墙对数据包的处理速度如果服务器网络设置了nat如aws的弹性ip机制则填写网卡连接接口的ip地址">6.提示是否使用SNAT规则(可选).默认为不使用。使用前请确保服务器具有不变的静态公网ip,可提升防火墙对数据包的处理速度.如果服务器网络设置了NAT(如AWS的弹性ip机制),则填写网卡连接接口的ip地址。</h4>
+<h4 id="7防火墙的配置默认配置是iptables-如果使用的是firewall如centos7请选择yes会自动配置firewall将无视snat并跳过后续的补充网卡接口步骤-补充网卡接口信息为空则使用默认值xen-kvm默认使用eth0openvz默认使用venet0如果使用其他公网接口需要在此指定接口名称填写错误vpn连接后将无法访问外网">7.防火墙的配置.默认配置是iptables。如果使用的是firewall(如CentOS7，请选择yes，会自动配置firewall,将无视SNAT并跳过后续的补充网卡接口步骤)。补充网卡接口信息,为空则使用默认值(Xen、KVM默认使用eth0,OpenVZ默认使用venet0).如果使用其他公网接口需要在此指定接口名称,填写错误VPN连接后将无法访问外网)</h4>
+<h4 id="8等待安装完成会出现默认用户名和配置文件地址-提示修改配置时多用户时用户名不能使用any自签名证书请将提示信息中的证书文件cacertpem拷贝到客户端修改后缀名为cer后导入-ios设备使用ikev1无需导入证书而是需要在连接时输入共享密钥共享密钥即是提示信息中的黄字psk">8.等待安装完成，会出现默认用户名和配置文件地址。（提示：修改配置时，多用户时用户名不能使用%any），自签名证书请将提示信息中的证书文件ca.cert.pem拷贝到客户端，修改后缀名为.cer后导入。ios设备使用Ikev1无需导入证书，而是需要在连接时输入共享密钥，共享密钥即是提示信息中的黄字PSK.</h4>
+<h2 id="可连接但是无法访问网络">可连接但是无法访问网络：</h2>
+<blockquote>
+<p>检查iptables是否正常启用,检查iptables规则是否与其他地方冲突,或根据服务器防火墙的实际情况手动修改配置。<br>
+检查sysctl是否开启ip_forward:<br>
+打开sysctl文件:vim /etc/sysctl.conf<br>
+修改net.ipv4.ip_forward=1后保存并关闭文件<br>
+使用以下指令刷新sysctl：sysctl -p<br>
+如执行后正常回显则表示生效。如显示错误信息，请重新打开/etc/syctl并根据错误信息对应部分用#号注释，保存后再刷新sysctl直至不会报错为止。<br>
+如果之前使用的自签名证书，后改用SSL证书，部分客户端可能需要卸载之前安装的自签名证书,否则可能会报Ike凭证不可接受的错误</p>
+</blockquote>
+<h2 id="卸载的方法">卸载的方法</h2>
+<h3 id="进入脚本所在目录的strongswan文件夹执行">进入脚本所在目录的strongswan文件夹执行:</h3>
+<pre><code>make uninstall
+</code></pre>
+<p>删除脚本所在目录的相关文件(one-key-ikev2.sh,strongswan.tar.gz,strongswan文件夹,my_key文件夹).</p>
+<h2 id="卸载后记得检查iptables配置">卸载后记得检查iptables配置.</h2>
+<p>##设置开机自启动服务，添加/usr/local/sbin/ipsec start到自启动脚本文件中(如rc.local等)：<br>
+##ipsec常用指令:<br>
+ipsec start   #启动服务<br>
+ipsec stop    #关闭服务<br>
+ipsec restart #重启服务<br>
+ipsec reload  #重新读取<br>
+ipsec status  #查看状态<br>
+ipsec --help  #查看帮助</p>
+<p>本文搬运于:https://github.com/quericy/one-key-ikev2-vpn~</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Linux安装轻量图形桌面环境]]></title>
         <id>https://yoowo.github.io/a/post/4/</id>

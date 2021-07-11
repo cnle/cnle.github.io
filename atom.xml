@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cnle.github.io</id>
     <title>Live every day happily </title>
-    <updated>2021-07-10T11:12:41.308Z</updated>
+    <updated>2021-07-11T02:49:31.161Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cnle.github.io"/>
     <link rel="self" href="https://cnle.github.io/atom.xml"/>
@@ -19,22 +19,18 @@
         <content type="html"><![CDATA[<h2 id="输入virt-what可以看到vps的虚拟架构~">输入virt-what，可以看到vps的虚拟架构~</h2>
 <h2 id="服务端要求">服务端要求：</h2>
 <blockquote>
-<blockquote>
 <p>Ubuntu或者CentOS-6/7或者Debian</p>
 </blockquote>
-</blockquote>
 <h2 id="客户端">客户端：</h2>
-<blockquote>
 <blockquote>
 <p>iOS/OSX=&gt;ikev1,ikev2<br>
 Andriod=&gt;ikev1<br>
 WindowsPhone=&gt;ikev2<br>
 其 他Windows平台=&gt;ikev2</p>
 </blockquote>
-</blockquote>
 <h2 id="1输入ifconfig查看公网接口名称稍后用到然后下载脚本">1.输入ifconfig查看公网接口名称稍后用到，然后下载脚本:</h2>
 <blockquote>
-<p>wget https://raw.githubusercontent.com/yoowo/a/main/one-key-ikev2.sh</p>
+<p>wget https://raw.githubusercontent.com/cnle/README/main/one-key-ikev2.sh</p>
 </blockquote>
 <h2 id="2若需受信任证书请提前把证书放在脚本目录给权限并运行">2.若需受信任证书，请提前把证书放在脚本目录，给权限并运行</h2>
 <pre><code>chmod +x one-key-ikev2.sh

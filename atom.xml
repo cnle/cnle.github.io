@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cnle.github.io</id>
     <title>Live every day happily </title>
-    <updated>2021-07-11T02:49:31.161Z</updated>
+    <updated>2021-09-30T13:07:15.725Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cnle.github.io"/>
     <link rel="self" href="https://cnle.github.io/atom.xml"/>
@@ -10,6 +10,45 @@
     <logo>https://cnle.github.io/images/avatar.png</logo>
     <icon>https://cnle.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Live every day happily </rights>
+    <entry>
+        <title type="html"><![CDATA[国外vps共享公网流量赚取收益！]]></title>
+        <id>https://cnle.github.io/post/pee/</id>
+        <link href="https://cnle.github.io/post/pee/">
+        </link>
+        <updated>2021-09-30T12:36:13.000Z</updated>
+        <content type="html"><![CDATA[<p>官网地址：https://peer2profit.com/r/163299318361557f9fd0631<br>
+进入注册账号（推荐谷歌账号直接登陆），支持微软,linux,安卓多平台！</p>
+<p>linux服务器教程：<br>
+wget https://updates.peer2profit.com/p2pclient<br>
+备用地址：https://img.zeruns.tech/down/p2pclient</p>
+<pre><code>cd /etc/systemd/sytem/
+vi /Peer2Profit.service
+</code></pre>
+<p>配置文件：</p>
+<pre><code>[Unit]
+Description=Peer2Profit
+[Service]
+Type=simple
+ExecStart=/opt/p2pclient -l xxxx@gmail.com
+TimeoutSec=15
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>#自行替换邮箱地址</p>
+<h1 id="开机自启配置">开机自启配置</h1>
+<pre><code>systemctl enable Peer2Profit
+</code></pre>
+<h1 id="启动服务">启动服务</h1>
+<pre><code>systemctl start Peer2Profit
+</code></pre>
+<h1 id="查看状态">查看状态</h1>
+<pre><code>systemctl status Peer2Profit
+</code></pre>
+<p>看到绿色小圆点说明运行成功，去网站后台查看流量！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[linux搭建ikev2协议的Vpn]]></title>
         <id>https://cnle.github.io/post/5/</id>

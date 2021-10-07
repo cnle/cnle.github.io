@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cnle.github.io</id>
     <title>Live every day happily </title>
-    <updated>2021-10-07T05:27:43.590Z</updated>
+    <updated>2021-10-07T05:28:32.318Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cnle.github.io"/>
     <link rel="self" href="https://cnle.github.io/atom.xml"/>
@@ -21,7 +21,7 @@
 　　3、 在LabConfig中，创建一个名为BypassTPMCheck的DWORD（32 位）值，数值设定为1。<br>
 　　4、 在LabConfig中，再创建一个名为BypassRAMCheck的DWORD（32 位）值，数值设定为1.<br>
 　　5、 接着创建一个名为BypassSecureBootCheck的DWORD（32 位）值，数值设定为1。</p>
-<p>2、 CMD以管理员身份依次输入：</p>
+<p>2、激活方法 CMD以管理员身份依次输入：</p>
 <p>slmgr.vbs /upk<br>
 slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX<br>
 slmgr /skms kms.loli.best<br>

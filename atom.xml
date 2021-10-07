@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cnle.github.io</id>
     <title>Live every day happily </title>
-    <updated>2021-09-30T13:10:24.606Z</updated>
+    <updated>2021-10-07T05:22:48.237Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cnle.github.io"/>
     <link rel="self" href="https://cnle.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://cnle.github.io/images/avatar.png</logo>
     <icon>https://cnle.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Live every day happily </rights>
+    <entry>
+        <title type="html"><![CDATA[Win11安装过程修改注册表跳过硬件检测方法]]></title>
+        <id>https://cnle.github.io/post/win11/</id>
+        <link href="https://cnle.github.io/post/win11/">
+        </link>
+        <updated>2021-10-07T05:12:42.000Z</updated>
+        <content type="html"><![CDATA[<p>1、 按下Win+R打开运行框，输入regedit打开注册表界面。</p>
+<p>2、 找到HKEY_LOCAL_MACHINE \ SYSTEM \ Setup，在该项目新建一个项——LabConfig。<br>
+　　3、 在LabConfig中，创建一个名为BypassTPMCheck的DWORD（32 位）值，数值设定为1。<br>
+　　4、 在LabConfig中，再创建一个名为BypassRAMCheck的DWORD（32 位）值，数值设定为1.<br>
+　　5、 接着创建一个名为BypassSecureBootCheck的DWORD（32 位）值，数值设定为1。</p>
+<p>2、 CMD以管理员身份依次输入：</p>
+<p>slmgr.vbs /upk<br>
+slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX<br>
+slmgr /skms kms.loli.best<br>
+slmgr /ato</p>
+<p>3、 分享一个网络宽带测速：http://www.webkaka.com/</p>
+<p>2021.10.5 Win11 正式版发布 版本号22000.194官网下载地址：<br>
+https://www.microsoft.com/zh-cn/software-download/windows11</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[国外vps共享公网流量赚取收益！]]></title>
         <id>https://cnle.github.io/post/pee/</id>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cnle.github.io</id>
     <title>Live every day happily </title>
-    <updated>2021-10-07T05:29:09.760Z</updated>
+    <updated>2021-10-07T06:53:10.458Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cnle.github.io"/>
     <link rel="self" href="https://cnle.github.io/atom.xml"/>
@@ -11,12 +11,38 @@
     <icon>https://cnle.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Live every day happily </rights>
     <entry>
-        <title type="html"><![CDATA[Win11安装过程修改注册表跳过硬件检测方法]]></title>
+        <title type="html"><![CDATA[最新2021 Ms Office零售版镜像下载和免费激活方法]]></title>
+        <id>https://cnle.github.io/post/office2021/</id>
+        <link href="https://cnle.github.io/post/office2021/">
+        </link>
+        <updated>2021-10-07T06:41:59.000Z</updated>
+        <content type="html"><![CDATA[<p>1丶  全套版推荐使用</p>
+<p>专业增强版：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/ProPlus2021Retail.img</p>
+<p>专业版：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/Professional2021Retail.img</p>
+<p>家庭学生版：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/HomeStudent2021Retail.img</p>
+<p>家庭企业版：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/HomeBusiness2021Retail.img</p>
+<p>Project专业版：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/ProjectPro2021Retail.img</p>
+<p>Visio专业版：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/VisioPro2021Retail.img</p>
+<p>2丶  独立版不推荐使用<br>
+Word：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/Word2021Retail.img</p>
+<p>Excel：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/Excel2021Retail.img</p>
+<p>PowerPoint：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/PowerPoint2021Retail.img</p>
+<p>Outlook：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/Outlook2021Retail.img</p>
+<p>Access：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/Access2021Retail.img</p>
+<p>Publisher：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/Publisher2021Retail.img</p>
+<p>Project标准版：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/ProjectStd2021Retail.img</p>
+<p>Visio标准版：http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60/media/zh-cn/VisioStd2021Retail.img</p>
+<p>激活方法：https://otp.landian.vip/zh-cn/download.html</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Win11安装过程修改注册表绕过硬件检测方法]]></title>
         <id>https://cnle.github.io/post/win11/</id>
         <link href="https://cnle.github.io/post/win11/">
         </link>
         <updated>2021-10-07T05:12:42.000Z</updated>
-        <content type="html"><![CDATA[<p>1、 按下shift+f10打开运行框，输入regedit打开注册表界面。</p>
+        <content type="html"><![CDATA[<p>此方法适用于U启动进入全新安装的过程中弹出此电脑无法安装win11的问题！</p>
+<p>1、 按下shift+f10打开运行框，输入regedit打开注册表界面。</p>
 <p>2、 找到HKEY_LOCAL_MACHINE \ SYSTEM \ Setup，在该项目新建一个项——LabConfig。<br>
 　　3、 在LabConfig中，创建一个名为BypassTPMCheck的DWORD（32 位）值，数值设定为1。<br>
 　　4、 在LabConfig中，再创建一个名为BypassRAMCheck的DWORD（32 位）值，数值设定为1.<br>

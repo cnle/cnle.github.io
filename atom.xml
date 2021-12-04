@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cnle.github.io</id>
-    <title>Live every day happily </title>
-    <updated>2021-10-07T06:53:10.458Z</updated>
+    <title>Mr. Li&apos;s personal blog</title>
+    <updated>2021-12-04T11:41:31.121Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cnle.github.io"/>
     <link rel="self" href="https://cnle.github.io/atom.xml"/>
     <subtitle>A website for ordinary people </subtitle>
     <logo>https://cnle.github.io/images/avatar.png</logo>
     <icon>https://cnle.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Live every day happily </rights>
+    <rights>All rights reserved 2021, Mr. Li&apos;s personal blog</rights>
     <entry>
         <title type="html"><![CDATA[最新2021 Ms Office零售版镜像下载和免费激活方法]]></title>
         <id>https://cnle.github.io/post/office2021/</id>
